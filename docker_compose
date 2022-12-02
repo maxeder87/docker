@@ -2,16 +2,16 @@ VERSION : 3.9.
 
 SERVICE:
 	web_server:
-		hostname : dockerfile
+		hostname : web_server
 		build:
-			context: ./cotizacion-bna
+			context: ./web-server
 		ports:
 			-5000:5000
 	script:
 		depends_on:
 			-web_server
 		build:
-			context: ./script
+			context: ./script_tp
 		enviroment:
 			-moneda=usd
 			-URL=web-server
@@ -19,4 +19,4 @@ SERVICE:
 		hostname : script
 		restart : always
 		volumes:
-			-./sync	
+			-./script_tp/sync:/app/sync	

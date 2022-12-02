@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  web_server:
+    hostname : web_server
+    build:
+      context: ./web-server
+    ports:
+      - 5000:5000
+
+  script:
+    depends_on:
+      - web_server
+    build:
+      context: ./script_tp
+    environment:
+      - moneda=usd
+      - URL=web-server
+      - PUERTO=5000
+    hostname : script
+    restart : always
+    volumes:
+      - ./script_tp/sync:/app/sync
+
