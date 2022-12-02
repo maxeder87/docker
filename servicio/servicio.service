@@ -3,7 +3,7 @@ Description = Servicio TP
 
 [Service]
 Type=simple
-Execstart=/bin/bash -c "#remplasame"
+Execstart=/bin/bash -c "#reemplazame"
 
 [Install]
 WantedBy=multi-user.target
