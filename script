@@ -1,0 +1,5 @@
+FROM bash:alpine.3.16
+WORKDIR /app
+RUN apk add jq curl
+COPY . .
+CMD ["bash" , "compra-venta.sh"]
