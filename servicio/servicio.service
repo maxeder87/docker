@@ -3,7 +3,7 @@ Description = Servicio TP
 
 [Service]
 Type=simple
-Execstart=/bin/bash -c "#reemplazame"
+ExecStart=/bin/bash -c "echo 1 > /home/maxeder87/tp_final/docker/script_tp/sync/outs.txt" 
 
 [Install]
 WantedBy=multi-user.target

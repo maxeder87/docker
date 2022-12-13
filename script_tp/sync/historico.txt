@@ -1,0 +1,10 @@
+precio de usd compra : 
+precio de usd venta : 
+precio de usd compra : 
+precio de usd venta : 
+precio de usd compra : "168,0000"
+precio de usd venta : "176,0000"
+precio de usd compra : "168,0000"
+precio de usd venta : "176,0000"
+precio de usd compra : "168,0000"
+precio de usd venta : "176,0000"

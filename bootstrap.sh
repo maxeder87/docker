@@ -1,9 +1,9 @@
 #!/bin/bash
 install () {
-	SYNC_PATH=$(pwd)/sync/outs.txt
-	sed "s|\#reemplazame|$SYNC_PATH|" servicio/servicio.template > servicio/servicio.service
+	SYNC_PATH=$(pwd)/script_tp/sync/outs.txt
+	sed "s|\#reemplazame|$SYNC_PATH|" servicio/service > servicio/servicio.service
 	sudo cp servicio/servicio.service /etc/systemd/system
-	sudo cp servicio/servicio.timer /etc/systemdd/system
+	sudo cp servicio/servicio.timer /etc/systemd/system
 	sudo systemctl daemon-reload 
 	sudo systemctl start servicio.timer
 
